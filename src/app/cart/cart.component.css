@@ -1,0 +1,14 @@
+.checkout_ad {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.checkout_content {
+    margin-left: 20px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}

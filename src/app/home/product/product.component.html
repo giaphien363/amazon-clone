@@ -1,0 +1,16 @@
+<div class="product">
+    <div class="product_info">
+        <p>{{ products.title }}</p>
+        <div class="product_price">
+            <small>$</small>
+            <strong>{{ products.price }}</strong>
+        </div>
+        <div class="product_rating">
+            <i class="fas fa-star" *ngFor="let ele of array"></i>
+        </div>
+        <img src="{{ products.image }}">
+        <div class="product_btn">
+            <button (click)="addToBasket()">Add to basket</button>
+        </div>
+    </div>
+</div>

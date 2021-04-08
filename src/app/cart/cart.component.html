@@ -1,0 +1,30 @@
+<div class="checkout">
+    <img src="../../assets/banner-cart.jpg" class="checkout_ad">
+    <div *ngIf="products.length == 0" class="checkout_content">
+        <h3>Your basket is empty !!!</h3>
+    </div>
+    <div *ngIf="products.length > 0" class="checkout_content">
+        <h3>Your shopping basket !!!</h3>
+        <div class="row">
+            <div class="col-md-7">
+                <app-prodcart *ngFor="let ele of products;let i = index" [product]="ele" [index]="i"></app-prodcart>
+            </div>
+            <div class="col-md-5 pl-5">
+                <div class="row">
+                    <div class="col-md-12 mb-1">
+                        <h5>Subtotal ( {{ products.length }} items ): <strong> ${{ price }}</strong></h5>
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <input type="radio" id="gift" class="mr-2">
+                        <label for="gift">
+                            <h5 class="font-weight-normal">This order contains a gift !</h5>
+                        </label>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="btn btn-warning font-weight-bold">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="checkout">
+    <img src="{{ product.image }}">
+    <div class="checkout_info">
+        <p class="checkout_title">
+            {{ product.title }}
+        </p>
+        <p class="checkout_price">
+            <small>$</small>
+            <strong>{{ product.price }}</strong>
+        </p>
+        <div class="checkout_rating">
+            <i class="fas fa-star" *ngFor="let ele of array"></i>
+        </div>
+        <button (click)="onDelete()">delete product</button>
+    </div>
+</div>

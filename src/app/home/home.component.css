@@ -1,0 +1,28 @@
+.home {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+    /* max-width: 1200px; */
+}
+
+.home_row {
+    display: flex;
+    z-index: 1;
+    margin: 0 5px 10px;
+}
+
+.home_image {
+    width: 100%;
+    z-index: -1;
+    margin-bottom: -150px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.col-4,
+.col-6,
+.col-12 {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto;
+}

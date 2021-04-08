@@ -1,0 +1,53 @@
+<div class="header">
+    <img routerLink="/" class="header_logo" src="../../assets/amazon_PNG11.png">
+
+    <div class="header_search">
+        <input class="header_searchInput" type="text">
+        <!-- logo here -->
+        <i class="fas fa-search header_searchIcon"></i>
+
+    </div>
+    <div class="header_nav">
+        <div class="header_option" routerLink="/login" style="cursor: pointer;border: none;">
+            <span class="optionOne">
+                Hello
+            </span>
+
+            <div *ngIf="isLoginMode">
+                <span class="optionTwo" (click)="logOut()">
+                    Log out
+                </span>
+            </div>
+            <div *ngIf="!isLoginMode">
+                <span class="optionTwo">
+                    Sign in
+                </span>
+            </div>
+        </div>
+
+        <div class="header_option" style="cursor: default;">
+            <span class="optionOne">
+                Return
+            </span>
+
+            <span class="optionTwo">
+                & Order
+            </span>
+        </div>
+
+        <div class="header_option" style="cursor: default;">
+            <span class="optionOne">
+                Your
+            </span>
+
+            <span class="optionTwo">
+                Prime
+            </span>
+        </div>
+
+        <div class="header_cart" routerLink="cart" style="cursor: pointer;">
+            <i class="fas fa-shopping-basket"></i>
+            <span class="optionTwo header_basketCount">{{ products.length }}</span>
+        </div>
+    </div>
+</div>

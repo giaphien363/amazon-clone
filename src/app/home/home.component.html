@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="home">
+        <div class="home_container">
+            <img class="home_image" src="../../assets/background-amazon-clone.jpg">
+
+            <div class="home_row">
+                <div class="row">
+                    <div class="col-6">
+                        <app-product *ngIf="products[0]" [products]="products[0]"></app-product>
+                    </div>
+                    <div class="col-6">
+                        <app-product *ngIf="products[1]" [products]="products[1]"></app-product>
+                    </div>
+                </div>
+            </div>
+            <div class="home_row">
+                <div class="row">
+                    <div class="col-4">
+                        <app-product *ngIf="products[2]" [products]="products[2]"></app-product>
+                    </div>
+                    <div class="col-4">
+                        <app-product *ngIf="products[3]" [products]="products[3]"></app-product>
+                    </div>
+                    <div class="col-4">
+                        <app-product *ngIf="products[4]" [products]="products[4]"></app-product>
+                    </div>
+                </div>
+            </div>
+            <div class="home_row">
+                <app-product style="width: 100%;" *ngIf="products[5]" [products]="products[5]"></app-product>
+            </div>
+        </div>
+    </div>
+</div>
